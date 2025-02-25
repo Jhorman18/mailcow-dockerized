@@ -400,7 +400,7 @@ services:
         - sogo-web-vol-1:/usr/lib/GNUstep/SOGo/
       labels:
         - "traefik.enable=true"
-        - "traefik.http.routers.mailcow.rule=Host(`mail.tudominio.com`)"
+        - "traefik.http.routers.mailcow.rule=Host(`mail.pruebita.shop`)"
         - "traefik.http.routers.mailcow.entrypoints=websecure"
         - "traefik.http.routers.mailcow.tls.certresolver=myresolver"
         - "traefik.http.services.mailcow.loadbalancer.server.port=8080"
