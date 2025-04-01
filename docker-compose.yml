@@ -403,14 +403,14 @@ services:
         - "traefik.enable=true"
 
         # Router para tráfico HTTPS
-        - "traefik.http.routers.mailcow.rule=Host(`mail.pruebita.shop`)"
+        - "traefik.http.routers.mailcow.rule=Host(`mail.hireflow.space`)"
         - "traefik.http.routers.mailcow.entrypoints=websecure"
         - "traefik.http.routers.mailcow.tls=true"
         - "traefik.http.routers.mailcow.tls.certresolver=letsencrypt"
         - "traefik.http.services.mailcow.loadbalancer.server.port=80"
 
         # Router para redirigir tráfico HTTP a HTTPS
-        - "traefik.http.routers.mailcow-http.rule=Host(`mail.pruebita.shop`)"
+        - "traefik.http.routers.mailcow-http.rule=Host(`mail.hireflow.space`)"
         - "traefik.http.routers.mailcow-http.entrypoints=web"
         - "traefik.http.routers.mailcow-http.middlewares=redirect-to-https"
         - "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https"
